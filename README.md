@@ -1,5 +1,7 @@
 # SQL & Database Analytics Agent with Self-Correction & Guardrails
 
+- **Repository**: [https://github.com/gaurang-bele/SQL-Database-Analytics-Agent-with-Self-Correction-Guardrails](https://github.com/gaurang-bele/SQL-Database-Analytics-Agent-with-Self-Correction-Guardrails)
+
 An enterprise-grade, production-ready SQL and Database Analytics Agent built with **LangGraph**, **SQLAlchemy**, **AST SQL Safety Filters**, **NeMo Guardrails**, and **Streamlit**.
 
 The agent transforms natural language business questions into precise, read-only SQL queries, executes them against relational databases (SQLite / PostgreSQL), visualizes structured data using interactive **Plotly** charts, and provides automated **self-correction reflection loops** (up to 3 retries) when execution errors occur.
@@ -109,8 +111,8 @@ Tayana_database_project/
 
 ### 2. Clone and Setup Environment
 ```bash
-git clone <repository-url>
-cd Tayana_database_project
+git clone https://github.com/gaurang-bele/SQL-Database-Analytics-Agent-with-Self-Correction-Guardrails.git
+cd SQL-Database-Analytics-Agent-with-Self-Correction-Guardrails
 
 # Create and activate virtual environment
 python -m venv .venv
