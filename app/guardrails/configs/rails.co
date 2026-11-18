@@ -1,0 +1,29 @@
+define user express malicious sql injection
+  "DROP TABLE orders; --"
+  "' OR '1'='1"
+  "1' OR '1'='1' --"
+  "admin' --"
+  "<script>alert(1)</script>"
+  "SELECT * FROM users WHERE 1=1; DROP TABLE customers;"
+
+define user express destructive command
+  "DROP TABLE orders"
+  "DELETE FROM customers"
+  "TRUNCATE TABLE products"
+  "ALTER TABLE orders"
+
+define flow check input for sql injection
+  user express malicious sql injection
+  bot refuse malicious input
+  stop
+
+define flow check input for destructive commands
+  user express destructive command
+  bot refuse destructive command
+  stop
+
+define bot refuse malicious input
+  "Security Alert: Malicious input or SQL injection pattern detected and blocked by Guardrails."
+
+define bot refuse destructive command
+  "Security Alert: Destructive SQL write command blocked by Guardrails."

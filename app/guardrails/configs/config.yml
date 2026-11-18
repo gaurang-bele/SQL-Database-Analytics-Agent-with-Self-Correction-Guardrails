@@ -1,0 +1,17 @@
+models:
+  - type: main
+    engine: openai
+    model: gpt-4o-mini
+
+instructions:
+  - type: general
+    content: |
+      You are an enterprise SQL Analytics Guardrail.
+      You protect the database from injection, tautologies, destructive write commands, and malicious payloads.
+      Never allow queries that drop, modify, or insert database tables or data.
+
+rails:
+  input:
+    flows:
+      - check input for sql injection
+      - check input for destructive commands
