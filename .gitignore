@@ -1,0 +1,33 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment secrets
+.env
+*.local
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Databases & local state
+*.db-journal
+*.sqlite3-journal
+data/*.db-journal
+
+# NeMo / HuggingFace caches
+.cache/
+hf_cache/
