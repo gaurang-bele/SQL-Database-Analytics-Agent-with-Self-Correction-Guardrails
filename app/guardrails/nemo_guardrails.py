@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 # Pattern definitions for malicious input detection
 TAUTOLOGY_PATTERN = re.compile(
-    r"(\bOR\b\s+['\"]?1['\"]?\s*=\s*['\"]?1['\"]?|\bOR\b\s+['\"]?[a-zA-Z]['\"]?\s*=\s*['\"]?[a-zA-Z]['\"]?|\bOR\b\s+true\b|\bHAVING\s+1\s*=\s*1\b|\bWHERE\s+1\s*=\s*1\b)",
+    r"(\b(OR|WHERE|AND|HAVING)\b\s*['\"]?([0-9a-zA-Z]+)['\"]?\s*=\s*['\"]?\3['\"]?|['\"]1['\"]\s*=\s*['\"]1['\"]|1\s*=\s*1|\bOR\b\s+true\b)",
     re.IGNORECASE
 )
 
